@@ -1,0 +1,932 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: all ease 0.3s;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+i {
+  font-size: 25px;
+}
+
+label {
+  color: rgb(81, 81, 81);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.desktop-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  color: black;
+}
+
+.mobile-container {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 15px;
+  width: 100%;
+  color: white;
+  gap: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header a {
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+  white-space: nowrap;
+}
+
+header a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header i {
+  font-size: 15px;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-offer-text {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 20px;
+}
+
+.hero-offer-text-sm {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 17px;
+}
+
+.hero-buttons,
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.category-badge {
+  font-weight: 600;
+}
+
+.offers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+}
+
+button.btn {
+  background-color: whitesmoke;
+  width: 100%;
+  max-height: 70px;
+  padding: 15px;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 120px;
+}
+
+button.btn:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+button.primary {
+  background-color: rgb(1, 93, 192);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: rgb(1, 99, 203);
+}
+
+button.secondary {
+  background-color: black;
+  color: white;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.row-cards-container {
+  display: flex;
+  gap: 25px;
+}
+
+input#aside-ask-input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+}
+
+#checkbox-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.form-input {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+  background-color: whitesmoke;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.form-input:focus {
+  outline: 2px solid rgb(55, 122, 255);
+}
+
+.address-input {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+}
+
+.icon-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background-color: whitesmoke;
+  width: 100%;
+  max-width: 500px;
+}
+
+.icon {
+  color: rgb(69, 69, 69);
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 10dvh;
+  width: 100%;
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  padding: 15px;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  gap: 25px;
+  z-index: 99;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#aside-ask-question {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  border-radius: 6px;
+  border: solid 1px gray;
+  min-width: 250px;
+}
+
+#aside-schedule-drive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  border-radius: 6px;
+  border: solid 1px gray;
+  min-width: 250px;
+}
+
+#aside-schedule-drive button {
+  background: none;
+  border: none;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+}
+
+.text-sm {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.schedule-drive-icon {
+  background-color: rgb(236, 236, 236);
+  width: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.schedule-drive-card {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+section:not(.hero-section) {
+  max-width: 2560px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  gap: 25px;
+}
+
+.hero-section {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Meet-Model-Y-Desktop.jpg");
+  background-blend-mode: color-burn;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  padding-top: 80px;
+  min-height: 80dvh;
+  text-align: center;
+  color: white;
+  gap: 20px;
+}
+
+.hero-section h1 {
+  font-size: clamp(36px, 8vw, 67px);
+  font-weight: 800;
+  padding: 0 15px;
+}
+
+.features-article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 25px;
+}
+
+.energy-article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.charge-stats-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.charge-article {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px 30px;
+}
+
+.charge-article .card-buttons {
+  justify-content: start;
+  width: 100%;
+  max-width: none;
+}
+
+.charge-article .card-buttons button {
+  width: auto;
+  min-width: 120px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.charge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.charge-title {
+  font-size: clamp(32px, 6vw, 50px);
+  text-transform: capitalize;
+  margin: 15px 0px;
+}
+
+.charge-description {
+  color: rgb(83, 83, 83);
+}
+
+.charge-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-top h3 {
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+.stat p {
+  color: rgb(83, 83, 83);
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.schedule-drive-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.model-y-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-Y-Performance-Desktop-NA.jpg"),
+    rgba(0, 0, 0, 0.1);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.model-3-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-3-Desktop-US-v2.jpg"),
+    rgba(0, 0, 0, 0.1);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cybertruck-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Cybertruck-Desktop-US-v3.jpg"),
+    rgba(0, 0, 0, 0.1);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cybertruck-card h3 svg {
+  width: clamp(150px, 40vw, 200px);
+}
+
+.image-card.features-card {
+  width: 100%;
+  min-width: 400px;
+  flex: 1;
+}
+
+.features-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png"),
+    rgba(0, 0, 0, 0.1);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.self-driving-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/video/upload/so_0/f_auto,q_auto/FSD-Hero-Desktop-AU-NZ.jpg"),
+    rgba(0, 0, 0, 0.1);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.solar-panels-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Solar-Panels-Desktop-v2.jpg");
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.powerwall-card {
+  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Powerwall-Desktop.png");
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  min-height: 500px;
+  height: 600px;
+  width: 100%;
+}
+
+.image-card > * {
+  width: 100%;
+}
+
+.image-card h3 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  max-height: 220px;
+}
+
+.card #content {
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 6px 0px 0px 6px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.card #content h3 {
+  font-size: clamp(22px, 3.5vw, 30px);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card #content p {
+  font-size: clamp(15px, 2vw, 18px);
+  color: rgb(81, 81, 81);
+}
+
+.card #content button {
+  max-width: 300px;
+}
+
+.card img {
+  width: 250px;
+  height: auto;
+  border-radius: 0px 6px 6px 0px;
+  flex-shrink: 0;
+}
+
+#terms-conditions-container {
+  display: grid;
+  gap: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
+  padding: 20px;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+}
+
+.schedule-drive-heading {
+  text-align: center;
+}
+
+.schedule-drive-cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.schedule-drive-superscript {
+  font-size: 10px;
+}
+
+.schedule-drive-info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.schedule-drive-form-header {
+  margin-bottom: 20px;
+}
+
+.schedule-drive-form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.schedule-drive-form-group {
+  margin-bottom: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.terms-link {
+  color: rgb(67, 67, 67);
+}
+
+.submit-button {
+  width: 100%;
+  max-width: 400px;
+  font-size: 15px;
+}
+
+.aside-icon-gray {
+  color: gray;
+}
+
+.aside-input-grid {
+  display: grid;
+  width: 100%;
+}
+
+.schedule-drive-btn-text {
+  color: rgb(83, 83, 83);
+  font-size: 14px;
+}
+
+.schedule-drive-section {
+  display: grid;
+  place-content: center;
+  padding: 15px;
+}
+
+.schedule-drive-container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  gap: 12dvh;
+}
+
+.schedule-drive-content {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 6dvh;
+}
+
+.schedule-drive-tesla-preview {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+#aside-schedule-drive i {
+  color: rgb(0, 123, 255);
+}
+
+div.card img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 360px) {
+  section {
+    padding: 10px;
+  }
+
+  .hero-section {
+    padding-top: 60px;
+  }
+
+  .image-card {
+    padding: 20px 15px;
+  }
+
+  aside {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .schedule-drive-tesla-preview {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .schedule-drive-form-row {
+    flex-direction: column;
+  }
+
+  .schedule-drive-form-group {
+    min-width: 100%;
+  }
+
+  .hero-buttons,
+  .card-buttons {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .hero-buttons button,
+  .card-buttons button {
+    width: 100%;
+  }
+
+  .aside-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #aside-ask-question,
+  #aside-schedule-drive {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .charge-article {
+    padding: 10px 15px;
+  }
+
+  .submit-button {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    gap: 5px;
+  }
+
+  header a {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .offer-article {
+    min-height: 400px;
+  }
+
+  div.card {
+    flex-direction: column-reverse;
+    max-height: none;
+  }
+
+  div.card #content {
+    border-radius: 0 0 6px 6px;
+    padding: 20px;
+  }
+
+  div.card #content button {
+    max-width: none;
+  }
+
+  div.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .image-card {
+    min-height: 600px;
+    height: auto;
+  }
+
+  .cybertruck-card svg {
+    width: clamp(180px, 50vw, 240px);
+  }
+
+  .charge-article .card-buttons button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .charge-stats {
+    gap: 20px;
+  }
+
+  .row-cards-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .desktop-container {
+    display: none;
+  }
+
+  .mobile-container {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 12px;
+    color: white;
+  }
+
+  header {
+    position: absolute;
+    width: 100%;
+  }
+
+  .features-article {
+    flex-direction: column;
+  }
+
+  .image-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .image-card > * {
+    width: 100%;
+  }
+
+  .image-card.features-card {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .energy-article {
+    grid-template-columns: 1fr;
+  }
+
+  .charge-stats-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .card-buttons {
+    width: 100%;
+    max-width: none;
+  }
+
+  .card-buttons button {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .offers-container {
+    flex-direction: column;
+  }
+
+  .schedule-drive-info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .schedule-drive-container {
+    align-content: center;
+    align-items: center;
+  }
+
+  .schedule-drive-tesla-preview {
+    max-width: 330px;
+  }
+
+  .charge-article .card-buttons {
+    flex-direction: column;
+  }
+
+  .charge-article .card-buttons button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .schedule-drive-info {
+    flex-wrap: wrap;
+  }
+
+  .schedule-drive-form-row {
+    flex-wrap: wrap;
+  }
+  
+  .schedule-drive-form-row > * {
+    width: 100%;
+  }
+
+  .schedule-drive-cards {
+    flex-flow: wrap-reverse;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .schedule-drive-tesla-preview {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .features-article {
+    flex-direction: row;
+  }
+
+  .image-card.features-card {
+    min-width: 50%;
+  }
+
+  .energy-article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
