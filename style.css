@@ -6,6 +6,10 @@
   transition: all ease 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   margin: 0;
@@ -25,9 +29,10 @@ label {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 img {
@@ -231,7 +236,7 @@ main {
 }
 
 aside {
-  position: fixed;
+  position: sticky;
   width: 100%;
   padding: 15px;
   bottom: 0;
@@ -901,7 +906,7 @@ div.card img {
   .schedule-drive-form-row {
     flex-wrap: wrap;
   }
-  
+
   .schedule-drive-form-row > * {
     width: 100%;
   }
