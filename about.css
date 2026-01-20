@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 header {
   position: relative;
 }
@@ -13,10 +18,6 @@ header nav a {
 .desktop-container {
   color: white;
   background-color: transparent;
-}
-
-section {
-  min-height: 100dvh;
 }
 
 #about-hero-section {
@@ -48,6 +49,10 @@ section {
   width: 100%;
 }
 
+.content button {
+  width: auto;
+}
+
 #hero-section-content {
   display: flex;
   flex-direction: column;
@@ -55,7 +60,7 @@ section {
   place-items: center;
   text-align: center;
   gap: 25px;
-  height: 80dvh;
+  height: 91dvh;
 }
 
 #hero-section-content h2 {
@@ -77,6 +82,11 @@ section {
 #future-section {
   place-items: center;
   background-image: url("https://digitalassets.tesla.com/tesla-contents/image/upload/h_1620,w_2880,c_fit,f_auto,q_auto:best/About-Us-Power-Hero-Desktop-Global");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  height: 160dvh;
 }
 
 #future-section-content {
@@ -87,3 +97,87 @@ section {
   max-width: 750px;
   width: 100%;
 }
+
+#future-section-content .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+#future-section-content .content button {
+  width: 320px;
+}
+
+#future-section-content .content h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: none;
+  border: solid 2px black;
+  color: black;
+  padding: 10px 0px;
+}
+
+button.secondary:hover {
+  background: black;
+  color: white;
+}
+
+button.light {
+  background: none;
+  border: solid 2px rgb(255, 255, 255);
+  color: white;
+  padding: 15px 0px;
+  margin: 15px 0px;
+}
+
+button.light:hover {
+  background: white;
+  color: black;
+}
+
+footer a {
+  color: white;
+}
+
+#join-us-section {
+  place-items: center;
+  padding: 25px;
+}
+
+#join-us-section-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+#join-us-section-content h2 {
+  font-size: 50px;
+}
+
+#terms-conditions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: gray;
+}
+
+#terms-conditions-container a {
+  color: rgb(177, 177, 177);
+}
+
+aside {
+  position: fixed;
+  background: none;
+  box-shadow: none;
+  width: 125px;
+  right: 25px;
+}
+
