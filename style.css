@@ -439,7 +439,8 @@ section {
 }
 
 .model-y-card {
-  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-Y-Performance-Desktop-NA.jpg"),
+  background:
+    url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-Y-Performance-Desktop-NA.jpg"),
     rgba(0, 0, 0, 0.1);
   background-blend-mode: color-burn;
   background-repeat: no-repeat;
@@ -448,7 +449,8 @@ section {
 }
 
 .model-3-card {
-  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-3-Desktop-US-v2.jpg"),
+  background:
+    url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Model-3-Desktop-US-v2.jpg"),
     rgba(0, 0, 0, 0.1);
   background-blend-mode: color-burn;
   background-repeat: no-repeat;
@@ -457,7 +459,8 @@ section {
 }
 
 .cybertruck-card {
-  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Cybertruck-Desktop-US-v3.jpg"),
+  background:
+    url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Card-Cybertruck-Desktop-US-v3.jpg"),
     rgba(0, 0, 0, 0.1);
   background-blend-mode: color-burn;
   background-repeat: no-repeat;
@@ -476,7 +479,8 @@ section {
 }
 
 .features-card {
-  background: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png"),
+  background:
+    url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Features-Desktop.png"),
     rgba(0, 0, 0, 0.1);
   background-blend-mode: color-burn;
   background-repeat: no-repeat;
@@ -485,7 +489,8 @@ section {
 }
 
 .self-driving-card {
-  background: url("https://digitalassets.tesla.com/tesla-contents/video/upload/so_0/f_auto,q_auto/FSD-Hero-Desktop-AU-NZ.jpg"),
+  background:
+    url("https://digitalassets.tesla.com/tesla-contents/video/upload/so_0/f_auto,q_auto/FSD-Hero-Desktop-AU-NZ.jpg"),
     rgba(0, 0, 0, 0.1);
   background-blend-mode: color-burn;
   background-repeat: no-repeat;
@@ -578,7 +583,7 @@ section {
 
 iframe {
   border-radius: 4px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.10);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
@@ -652,6 +657,20 @@ footer a {
 .aside-input-grid {
   display: grid;
   width: 100%;
+}
+
+.aside-desktop {
+  display: block;
+}
+
+.aside-mobile {
+  display: none;
+}
+
+.aside-desktop + .aside-mobile a{
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
 }
 
 .schedule-drive-btn-text {
@@ -745,7 +764,7 @@ div.card img {
   }
 
   .aside-container {
-    flex-direction: column;
+    padding: 15px;
     gap: 15px;
   }
 
@@ -761,6 +780,14 @@ div.card img {
 
   .submit-button {
     max-width: 100%;
+  }
+
+  .aside-desktop {
+    display: none;
+  }
+
+  .aside-mobile {
+    display: block;
   }
 }
 

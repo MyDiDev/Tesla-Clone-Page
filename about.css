@@ -107,7 +107,8 @@ header nav a {
 }
 
 #future-section-content .content button {
-  width: 320px;
+  width: auto;
+  padding: 10px;
 }
 
 #future-section-content .content h2 {
@@ -173,11 +174,13 @@ footer a {
   color: rgb(177, 177, 177);
 }
 
-aside {
-  position: fixed;
-  background: none;
-  box-shadow: none;
-  width: 125px;
-  right: 25px;
-}
 
+@media (min-width: 560px) {
+  aside {
+    position: fixed;
+    background: none;
+    box-shadow: none;
+    width: 125px;
+    right: 25px;
+  }
+}
