@@ -127,6 +127,7 @@ header i {
   align-items: center;
   gap: 25px;
   height: 100%;
+  padding: 20px 0px;
 }
 
 button.btn {
