@@ -29,7 +29,7 @@ label {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   z-index: 100;
   width: 100%;
   top: 0;
@@ -714,6 +714,7 @@ body#about-body {
 
 header#about-header {
   position: relative;
+  top: 0;
 }
 
 header#about-header nav a {
